@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha",
-    "watch": "CONSUMER_SECRET=cs ACCESS_TOKEN_SECRET=ats mocha watch --require intelli-espower-loader"
+    "watch": "CONSUMER_SECRET=cs ACCESS_TOKEN_SECRET=ats mocha watch --require intelli-espower-loader",
+    "start": "node app"
   },
   "author": "sisisin",
   "license": "ISC",
