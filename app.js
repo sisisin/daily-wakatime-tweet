@@ -7,7 +7,8 @@ const twitter = require('./lib/twitter');
 const job = new CronJob('1 0 0 * * *', () => {
   let yesterday;
   let t = new Date();
-  yesterday = new Date(`${t.getFullYear()}/${t.getMonth() + 1}/${t.getDate() - 1}`);
+  t.setDate(t.getDate() - 1);
+  yesterday = new Date(`${t.getFullYear()}/${t.getMonth() + 1}/${t.getDate()}`);
   
   wakatime.getGrandTotalTime(yesterday, (err, time) => {
     twitter(`@Azsimeji ${yesterday.toLocaleDateString()}の作業時間は${time}でした`, (err, data, res) => {
