@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "cron": "^1.0.9",
+    "log4js": "^0.6.29",
     "request": "^2.67.0",
     "twit": "^2.1.1"
   },
